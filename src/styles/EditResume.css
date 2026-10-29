@@ -1,0 +1,883 @@
+/* =========================================================
+   CAREERLANE AI — RESUME EDITOR
+   Theme: Warm off-white, deep teal, muted gold
+   ========================================================= */
+
+.re-root {
+  --re-bg: #f3f6f5;
+  --re-panel: #ffffff;
+  --re-panel-soft: #fbfdfc;
+  --re-teal: #0b4745;
+  --re-teal-deep: #073b39;
+  --re-teal-light: #e7f2ef;
+  --re-teal-border: #cfe1dc;
+  --re-ink: #173432;
+  --re-muted: #718083;
+  --re-muted-soft: #95a29f;
+  --re-border: #dce6e3;
+  --re-border-strong: #c8d7d2;
+  --re-gold: #c5a06a;
+  --re-gold-light: #f5ead7;
+  --re-danger: #b64040;
+  --re-danger-light: #fff0ee;
+  --re-shadow: 0 12px 34px rgba(10, 53, 55, 0.075);
+
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-sizing: border-box;
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  min-height: 600px;
+  margin-left: calc(50% - 50vw);
+  padding: 12px;
+  overflow: hidden;
+
+  color: var(--re-ink);
+  background:
+    radial-gradient(
+      circle at 92% 1%,
+      rgba(197, 160, 106, 0.12),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 2% 95%,
+      rgba(11, 71, 69, 0.065),
+      transparent 28%
+    ),
+    var(--re-bg);
+
+  font-family:
+    "DM Sans",
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+.re-root,
+.re-root *,
+.re-root *::before,
+.re-root *::after {
+  box-sizing: border-box;
+}
+
+.re-root button,
+.re-root input,
+.re-root textarea,
+.re-root select {
+  font: inherit;
+}
+
+.re-root button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-width: 0;
+  min-height: 36px;
+  padding: 8px 11px;
+
+  border: 1px solid var(--re-border);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--re-ink);
+
+  font-size: 12px;
+  font-weight: 750;
+  line-height: 1.2;
+  text-align: center;
+
+  cursor: pointer;
+
+  transition:
+    background 150ms ease,
+    border-color 150ms ease,
+    color 150ms ease,
+    box-shadow 150ms ease,
+    transform 150ms ease;
+}
+
+.re-root button:hover:not(:disabled) {
+  border-color: #adc9c1;
+  background: #f6faf8;
+  color: var(--re-teal);
+}
+
+.re-root button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.re-root button:focus-visible,
+.re-root input:focus-visible,
+.re-root select:focus-visible,
+.re-root textarea:focus-visible,
+.re-root label.re-btn:focus-within {
+  outline: 2px solid var(--re-gold);
+  outline-offset: 2px;
+}
+
+.re-root button:disabled {
+  opacity: 0.42;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.re-root input,
+.re-root select,
+.re-root textarea {
+  min-width: 0;
+  color: var(--re-ink);
+}
+
+.re-root input:not([type="color"]):not([type="range"]):not([type="file"]),
+.re-root select {
+  min-height: 36px;
+  padding: 7px 9px;
+  border: 1px solid var(--re-border-strong);
+  border-radius: 9px;
+  background: #fff;
+}
+
+.re-root input[type="color"] {
+  width: 42px;
+  min-width: 42px;
+  height: 34px;
+  padding: 3px;
+  border: 1px solid var(--re-border);
+  border-radius: 9px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.re-root input[type="range"] {
+  width: 100%;
+  min-width: 0;
+  accent-color: var(--re-teal);
+  cursor: pointer;
+}
+
+/* ================= TOP TOOLBAR ================= */
+
+.re-top {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 10px;
+
+  min-height: 66px;
+  padding: 10px 14px;
+
+  border: 1px solid var(--re-border);
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: var(--re-shadow);
+}
+
+.re-brand {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+
+  min-height: 38px;
+  padding: 0 13px 0 2px;
+
+  border-right: 1px solid #e8efec;
+  color: var(--re-teal);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  white-space: nowrap;
+}
+
+.re-group {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.re-group button {
+  min-height: 36px;
+  padding: 8px 10px;
+  white-space: nowrap;
+}
+
+.re-group .re-primary,
+.re-root .re-primary {
+  padding-inline: 15px;
+  border-color: var(--re-teal);
+  background: var(--re-teal);
+  color: #fff;
+  box-shadow: 0 5px 12px rgba(11, 71, 69, 0.12);
+}
+
+.re-group .re-primary:hover,
+.re-root .re-primary:hover:not(:disabled) {
+  border-color: var(--re-teal-deep);
+  background: var(--re-teal-deep);
+  color: #fff;
+}
+
+.re-zoom {
+  min-width: 48px;
+  color: var(--re-teal);
+  font-size: 12px;
+  font-weight: 850;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.re-spacer {
+  flex: 1 1 auto;
+  min-width: 8px;
+}
+
+/* ================= THREE-COLUMN EDITOR ================= */
+
+.re-body {
+  display: grid;
+  flex: 1 1 auto;
+
+  grid-template-columns:
+    minmax(235px, 270px)
+    minmax(0, 1fr)
+    minmax(245px, 285px);
+
+  gap: 12px;
+  align-items: stretch;
+
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* ================= LEFT AND RIGHT PANELS ================= */
+
+.re-side {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  min-width: 0;
+  min-height: 0;
+  padding: 18px 16px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  scrollbar-width: thin;
+  scrollbar-color: #c5d5d0 transparent;
+
+  border: 1px solid var(--re-border);
+  border-radius: 16px;
+
+  background: var(--re-panel);
+  box-shadow: var(--re-shadow);
+}
+
+.re-side::-webkit-scrollbar,
+.re-canvas-area::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.re-side::-webkit-scrollbar-track,
+.re-canvas-area::-webkit-scrollbar-track {
+  border-radius: 999px;
+  background: #edf2f0;
+}
+
+.re-side::-webkit-scrollbar-thumb,
+.re-canvas-area::-webkit-scrollbar-thumb {
+  border: 2px solid #edf2f0;
+  border-radius: 999px;
+  background: #bfd0cb;
+}
+
+.re-side h4 {
+  margin: 14px 0 9px;
+  color: var(--re-teal);
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.105em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.re-side h4:first-child {
+  margin-top: 0;
+}
+
+/* ================= TOOL BUTTON GRIDS ================= */
+
+.re-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px;
+
+  min-width: 0;
+  margin: 2px 0 4px;
+}
+
+.re-grid > button,
+.re-grid > .re-btn {
+  width: 100%;
+  min-width: 0;
+  min-height: 37px;
+  padding: 8px 7px;
+  overflow-wrap: anywhere;
+}
+
+.re-wide {
+  display: flex;
+  width: 100%;
+  min-height: 40px;
+  justify-content: center;
+  margin: 3px 0;
+  padding: 10px 12px;
+  text-align: center;
+}
+
+.re-root .re-h1 {
+  border-color: var(--re-teal);
+  background: var(--re-teal);
+  color: #fff;
+}
+
+.re-root .re-h1:hover:not(:disabled) {
+  border-color: var(--re-teal-deep);
+  background: var(--re-teal-deep);
+  color: #fff;
+}
+
+.re-root .re-h2 {
+  border-color: #e2cfad;
+  background: var(--re-gold-light);
+  color: var(--re-teal-deep);
+}
+
+.re-root .re-h2:hover:not(:disabled) {
+  border-color: var(--re-gold);
+  background: #f1e1c5;
+  color: var(--re-teal-deep);
+}
+
+/* ================= HELPER TEXT AND LABEL BUTTONS ================= */
+
+.re-hint {
+  margin: 16px 0 2px;
+  padding: 11px 12px;
+
+  border: 1px solid #e7eeeb;
+  border-radius: 10px;
+
+  background: #f8fbfa;
+  color: var(--re-muted);
+
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.re-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  min-height: 37px;
+  padding: 8px;
+
+  border: 1px solid var(--re-border);
+  border-radius: 10px;
+
+  background: #fff;
+  color: var(--re-ink);
+
+  font-size: 12px;
+  font-weight: 750;
+  line-height: 1.25;
+  text-align: center;
+
+  cursor: pointer;
+}
+
+.re-btn:hover {
+  border-color: #adc9c1;
+  background: #f6faf8;
+  color: var(--re-teal);
+}
+
+/* ================= RESUME CANVAS WORKSPACE ================= */
+
+.re-canvas-area {
+  position: relative;
+  display: block;
+
+  min-width: 0;
+  min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+
+  scrollbar-width: thin;
+  scrollbar-color: #bfcfc9 #e8efec;
+
+  border: 1px solid var(--re-border);
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.25) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(255, 255, 255, 0.25) 75%
+    ),
+    linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.25) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(255, 255, 255, 0.25) 75%
+    ),
+    #e9efed;
+
+  background-position: 0 0, 8px 8px;
+  background-size: 16px 16px;
+
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.re-page {
+  position: relative;
+  flex: 0 0 auto;
+  overflow: visible;
+
+  border: 0;
+  background: #fff;
+
+  box-shadow:
+    0 2px 5px rgba(20, 39, 35, 0.08),
+    0 18px 46px rgba(20, 39, 35, 0.15);
+
+  transform-origin: 0 0;
+  isolation: isolate;
+}
+
+.re-page canvas {
+  display: block;
+  max-width: none !important;
+  background: transparent;
+  outline: none;
+}
+
+/* ================= EDITABLE CANVAS TEXT ================= */
+
+.re-edit {
+  position: absolute;
+  z-index: 10;
+
+  display: block;
+  min-height: 1.5em;
+  margin: 0;
+  padding: 0 1px;
+  overflow: hidden;
+
+  border: 1px dashed var(--re-gold);
+  border-radius: 2px;
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 0 0 2px rgba(197, 160, 106, 0.12);
+
+  color: var(--re-ink);
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  resize: none;
+
+  transform-origin: 0 0;
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+/* ================= RIGHT-SIDE PROPERTY CONTROLS ================= */
+
+.re-props {
+  gap: 0;
+}
+
+.re-props > h4 {
+  padding-bottom: 9px;
+  border-bottom: 1px solid #edf2f0;
+}
+
+.re-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  min-width: 0;
+  margin: 7px 0;
+  padding: 8px 0;
+
+  color: #53686a;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.re-row > input:not([type="color"]):not([type="range"]),
+.re-row > select {
+  width: 122px;
+  max-width: 55%;
+  flex: 0 1 122px;
+}
+
+.re-row > input[type="range"] {
+  max-width: 58%;
+  flex: 0 1 150px;
+}
+
+.re-row > input[type="color"] {
+  flex: 0 0 42px;
+}
+
+.re-props .re-grid {
+  margin-bottom: 8px;
+}
+
+.re-props .re-grid button {
+  min-height: 36px;
+  background: #fbfdfc;
+}
+
+.re-props .re-grid button.on {
+  border-color: #b8d7cf;
+  background: var(--re-teal-light);
+  color: var(--re-teal);
+  box-shadow: inset 0 0 0 1px rgba(11, 71, 69, 0.025);
+}
+
+.re-props .re-grid button.on:hover {
+  background: #dcece7;
+}
+
+.re-root .re-danger {
+  margin-top: 12px;
+  border-color: #f0ceca;
+  background: var(--re-danger-light);
+  color: var(--re-danger);
+}
+
+.re-root .re-danger:hover:not(:disabled) {
+  border-color: #e5aaa4;
+  background: #ffe7e4;
+  color: #9b2f2f;
+}
+
+/* ================= SAVE / EXPORT TOAST ================= */
+
+.re-toast {
+  position: fixed;
+  z-index: 99999;
+  right: 24px;
+  bottom: 22px;
+
+  max-width: min(360px, calc(100vw - 32px));
+  padding: 12px 17px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+
+  background: var(--re-teal-deep);
+  color: #fff;
+
+  box-shadow: 0 15px 38px rgba(7, 59, 57, 0.24);
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+
+  animation: re-toast-in 180ms ease-out;
+}
+
+@keyframes re-toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= LARGE DESKTOP ================= */
+
+@media (min-width: 1550px) {
+  .re-body {
+    grid-template-columns:
+      minmax(260px, 290px)
+      minmax(0, 1fr)
+      minmax(270px, 310px);
+
+    gap: 14px;
+  }
+
+  .re-side {
+    padding: 20px 18px;
+  }
+}
+
+/* ================= SMALLER LAPTOP WIDTHS ================= */
+
+@media (max-width: 1180px) and (min-width: 941px) {
+  .re-root {
+    gap: 9px;
+    padding: 9px;
+  }
+
+  .re-top {
+    gap: 7px;
+    padding: 8px 10px;
+  }
+
+  .re-brand {
+    padding-right: 9px;
+    font-size: 16px;
+  }
+
+  .re-group {
+    gap: 4px;
+  }
+
+  .re-group button {
+    padding-inline: 8px;
+  }
+
+  .re-body {
+    grid-template-columns:
+      minmax(205px, 225px)
+      minmax(0, 1fr)
+      minmax(215px, 235px);
+
+    gap: 8px;
+  }
+
+  .re-side {
+    padding: 14px 11px;
+  }
+}
+
+/* With limited width, keep the tools left and properties below. */
+
+@media (max-width: 940px) and (min-width: 641px) {
+  .re-root {
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
+  }
+
+  .re-top {
+    flex-wrap: wrap;
+  }
+
+  .re-brand {
+    flex: 1 1 180px;
+  }
+
+  .re-body {
+    flex: 1 1 auto;
+
+    grid-template-columns:
+      minmax(205px, 0.7fr)
+      minmax(0, 1.5fr);
+
+    grid-template-rows:
+      minmax(430px, 1fr)
+      minmax(215px, auto);
+
+    grid-template-areas:
+      "tools canvas"
+      "props props";
+
+    overflow: visible;
+  }
+
+  .re-side:not(.re-props) {
+    grid-area: tools;
+  }
+
+  .re-canvas-area {
+    grid-area: canvas;
+    min-height: 430px;
+  }
+
+  .re-props {
+    grid-area: props;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-content: start;
+    column-gap: 14px;
+
+    max-height: 360px;
+  }
+
+  .re-props > h4,
+  .re-props > p,
+  .re-props > .re-wide {
+    grid-column: 1 / -1;
+  }
+
+  .re-props .re-grid {
+    align-self: start;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 640px) {
+  .re-root {
+    width: 100%;
+    height: auto;
+    min-height: 100dvh;
+    margin-left: 0;
+    padding: 8px;
+    overflow: visible;
+    gap: 9px;
+  }
+
+  .re-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    padding: 10px;
+    border-radius: 13px;
+  }
+
+  .re-brand {
+    flex: 1 1 100%;
+    min-height: 32px;
+    padding: 0 0 7px;
+
+    border-right: 0;
+    border-bottom: 1px solid #e8efec;
+
+    font-size: 17px;
+  }
+
+  .re-top > .re-group {
+    flex: 1 1 auto;
+  }
+
+  .re-top > .re-group:last-child {
+    flex: 1 1 100%;
+  }
+
+  .re-top > .re-group:last-child button {
+    flex: 1 1 0;
+  }
+
+  .re-spacer {
+    display: none;
+  }
+
+  .re-body {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    overflow: visible;
+  }
+
+  .re-canvas-area {
+    order: 0;
+    width: 100%;
+    height: 68vh;
+    min-height: 490px;
+    max-height: 720px;
+    border-radius: 13px;
+  }
+
+  .re-side {
+    flex: 0 0 auto;
+    max-height: none;
+    padding: 15px 13px;
+    overflow: visible;
+    border-radius: 13px;
+  }
+
+  .re-side:not(.re-props) {
+    order: 1;
+  }
+
+  .re-props {
+    order: 2;
+  }
+
+  .re-side h4 {
+    margin-top: 13px;
+  }
+
+  .re-props .re-row {
+    gap: 8px;
+  }
+
+  .re-toast {
+    right: 12px;
+    bottom: 12px;
+  }
+}
+
+/* ================= SHORT LAPTOP SCREENS ================= */
+
+@media (max-height: 760px) and (min-width: 941px) {
+  .re-root {
+    gap: 8px;
+    min-height: 520px;
+    padding: 8px;
+  }
+
+  .re-top {
+    min-height: 54px;
+    padding-block: 7px;
+  }
+
+  .re-side {
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+}
+
+/* ================= ACCESSIBILITY ================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .re-root *,
+  .re-root *::before,
+  .re-root *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

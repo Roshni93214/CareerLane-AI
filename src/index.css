@@ -1,0 +1,216 @@
+/* =========================================================
+   CAREERLANE - GLOBAL STYLES
+========================================================= */
+
+/* =========================================================
+   CAREERLANE SHARED THEME
+========================================================= */
+
+:root {
+  --cl-home-cream: #fbf2e1;
+  --cl-home-cream-soft: #f8f3e8;
+  --cl-home-white: #ffffff;
+  --cl-home-teal: #0b4745;
+  --cl-home-teal-dark: #083b39;
+  --cl-home-text: #173432;
+  --cl-home-muted: #66756f;
+  --cl-home-gold: #d2b68a;
+  --cl-home-gold-dark: #c18d3e;
+  --cl-home-border: rgba(11, 71, 69, 0.14);
+  --cl-home-shadow: 0 18px 50px rgba(31, 47, 43, 0.10);
+}
+
+/* =========================================================
+   BOX SIZING RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HTML / BODY
+========================================================= */
+
+html {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+
+  scroll-behavior: auto;
+}
+
+
+body {
+  overflow-x: hidden;
+  overscroll-behavior-y: auto;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  background: #f8f7f2;
+  color: #173432;
+
+  font-family:
+    "DM Sans",
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   DEFAULT FORM FONT
+========================================================= */
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+button {
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   IMAGES
+========================================================= */
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+input,
+textarea,
+select {
+  outline: none;
+}
+
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+
+/* =========================================================
+   SELECTION
+========================================================= */
+
+::selection {
+  background: rgba(189, 139, 66, 0.22);
+  color: #075b55;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: #f1f2ed;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #b9c8c3;
+  border-radius: 999px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8fa9a2;
+}
+
+
+/* =========================================================
+   MOBILE TAP HIGHLIGHT
+========================================================= */
+
+button,
+a,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #bd8b42;
+  outline-offset: 2px;
+}

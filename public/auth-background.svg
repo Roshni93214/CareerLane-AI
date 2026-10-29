@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbf8ef"/>
+      <stop offset="58%" stop-color="#f5f3e9"/>
+      <stop offset="100%" stop-color="#e9eee5"/>
+    </linearGradient>
+
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#083f3c"/>
+      <stop offset="100%" stop-color="#0b5a54"/>
+    </linearGradient>
+
+    <linearGradient id="sage" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#dce6dc" stop-opacity=".9"/>
+      <stop offset="100%" stop-color="#b9cfc5" stop-opacity=".45"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Main cream background -->
+  <rect
+    width="1600"
+    height="1000"
+    fill="url(#bg)"
+  />
+
+  <!-- Upper right teal accent -->
+  <path
+    d="M1335 0H1600V310C1515 270 1445 205 1410 120C1390 72 1360 35 1335 0Z"
+    fill="#0a514d"
+    opacity=".96"
+  />
+
+  <path
+    d="M1490 0H1600V220C1550 184 1518 132 1490 0Z"
+    fill="#0e625c"
+    opacity=".55"
+  />
+
+  <!-- Lower flowing teal wave -->
+  <path
+    d="M0 805C175 760 300 790 438 844C595 906 730 963 910 934C1082 906 1195 800 1330 760C1438 728 1528 746 1600 790V1000H0Z"
+    fill="url(#teal)"
+  />
+
+  <!-- Sage wave -->
+  <path
+    d="M0 748C180 700 325 733 474 798C626 864 748 913 894 888C1050 861 1172 757 1306 710C1432 665 1522 690 1600 735"
+    fill="none"
+    stroke="#cbd8cf"
+    stroke-width="34"
+    opacity=".65"
+  />
+
+  <!-- Cream wave line -->
+  <path
+    d="M0 720C175 674 322 704 478 770C636 836 754 881 900 858C1055 834 1172 731 1314 683C1434 642 1524 663 1600 705"
+    fill="none"
+    stroke="#f6f1e5"
+    stroke-width="3"
+    opacity=".9"
+  />
+
+  <!-- Gold wave line -->
+  <path
+    d="M0 698C170 650 326 682 490 748C645 810 770 855 908 831C1060 805 1188 706 1320 661C1430 623 1528 643 1600 681"
+    fill="none"
+    stroke="#b58a4a"
+    stroke-width="1.5"
+    opacity=".7"
+  />
+
+  <!-- Soft left organic shape -->
+  <path
+    d="M0 0H330C268 118 212 226 226 350C241 486 126 574 0 596Z"
+    fill="#ffffff"
+    opacity=".32"
+  />
+
+  <path
+    d="M0 0H270C205 142 171 259 193 366C211 455 111 535 0 555Z"
+    fill="#dce6dc"
+    opacity=".38"
+  />
+
+  <!-- Thin gold orbit curves -->
+  <ellipse
+    cx="650"
+    cy="500"
+    rx="590"
+    ry="410"
+    fill="none"
+    stroke="#b58a4a"
+    stroke-width="1.4"
+    opacity=".42"
+  />
+
+  <ellipse
+    cx="650"
+    cy="500"
+    rx="505"
+    ry="348"
+    fill="none"
+    stroke="#b58a4a"
+    stroke-width="1"
+    opacity=".24"
+  />
+
+  <!-- Subtle dot pattern -->
+  <g fill="#b58a4a" opacity=".32">
+    <circle cx="1040" cy="160" r="3"/>
+    <circle cx="1060" cy="160" r="3"/>
+    <circle cx="1080" cy="160" r="3"/>
+
+    <circle cx="1040" cy="180" r="3"/>
+    <circle cx="1060" cy="180" r="3"/>
+    <circle cx="1080" cy="180" r="3"/>
+
+    <circle cx="1040" cy="200" r="3"/>
+    <circle cx="1060" cy="200" r="3"/>
+    <circle cx="1080" cy="200" r="3"/>
+  </g>
+
+  <!-- Gold decorative stars -->
+  <g fill="#b58a4a">
+
+    <path
+      d="M420 170l5 13 13 5-13 5-5 13-5-13-13-5 13-5z"
+      opacity=".85"
+    />
+
+    <path
+      d="M1500 580l4 10 10 4-10 4-4 10-4-10-10-4 10-4z"
+      opacity=".8"
+    />
+
+    <path
+      d="M1270 870l4 10 10 4-10 4-4 10-4-10-10-4 10-4z"
+      opacity=".6"
+    />
+
+  </g>
+</svg>

@@ -1,0 +1,538 @@
+/* =========================================================
+   CAREERLANE — HOW IT WORKS
+   PERFORMANCE OPTIMIZED
+   CLASSIC CREAM • DEEP GREEN • MUTED GOLD
+   ========================================================= */
+
+.how-it-works {
+  position: relative;
+  padding: 95px 22px 105px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 88% 12%,
+      rgba(11, 71, 69, 0.055),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 10% 80%,
+      rgba(210, 182, 138, 0.10),
+      transparent 28%
+    ),
+    #fffaf2;
+
+  text-align: center;
+  color: #173432;
+}
+
+.how-it-works::before {
+  content: "";
+  position: absolute;
+
+  width: 330px;
+  height: 330px;
+
+  right: -180px;
+  top: 25%;
+
+  border-radius: 50%;
+
+  background: rgba(11, 71, 69, 0.035);
+
+  pointer-events: none;
+}
+
+.how-it-works::after {
+  content: "";
+  position: absolute;
+
+  width: 240px;
+  height: 240px;
+
+  left: -120px;
+  bottom: 12%;
+
+  border-radius: 50%;
+
+  background: rgba(210, 182, 138, 0.07);
+
+  pointer-events: none;
+}
+
+.how-it-works-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1180px;
+
+  margin: 0 auto;
+}
+
+.how-it-works h2 {
+  margin: 18px 0 0;
+
+  color: #173432;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(38px, 4.5vw, 54px);
+
+  line-height: 1.08;
+  letter-spacing: -1.7px;
+  font-weight: 700;
+}
+
+.how-it-works h2 span {
+  color: #0b4745;
+}
+
+.how-it-works-subtitle {
+  max-width: 700px;
+
+  margin: 18px auto 48px;
+
+  color: #718078;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.steps-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+
+  text-align: left;
+}
+
+.step-card {
+  position: relative;
+
+  min-height: 310px;
+
+  padding: 27px;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(11, 71, 69, 0.11);
+
+  border-radius: 18px;
+
+  background:
+    rgba(255, 255, 255, 0.80);
+
+  box-shadow:
+    0 11px 30px rgba(31, 47, 43, 0.055);
+
+  /*
+    Removed backdrop-filter because it can cause
+    GPU-heavy rendering during page scrolling.
+  */
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+
+  /*
+    Helps the browser isolate the card's rendering.
+  */
+  contain: paint;
+}
+
+.step-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 120px;
+  height: 120px;
+
+  right: -65px;
+  top: -65px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(210, 182, 138, 0.09);
+
+  transition:
+    transform 0.3s ease;
+
+  pointer-events: none;
+}
+
+.step-card:hover::after {
+  transform: scale(1.35);
+}
+
+.step-card:hover {
+  transform: translateY(-6px);
+
+  border-color:
+    rgba(11, 71, 69, 0.19);
+
+  box-shadow:
+    0 21px 44px rgba(31, 47, 43, 0.09);
+}
+
+.step-number {
+  position: absolute;
+
+  top: 18px;
+  right: 19px;
+
+  color: rgba(11, 71, 69, 0.12);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 25px;
+
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* =========================================================
+   SIMPLE PLAIN ICONS
+   ========================================================= */
+
+.step-icon {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  margin-bottom: 20px;
+
+  background: transparent;
+
+  color: #0b4745;
+
+  font-size: 21px;
+
+  box-shadow: none;
+
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+.step-icon svg {
+  width: 38px;
+  height: 38px;
+
+  display: block;
+
+  color: #0b4745;
+
+  stroke: currentColor;
+}
+
+.step-card:hover .step-icon {
+  transform:
+    translateY(-2px)
+    rotate(-2deg);
+
+  background: transparent;
+}
+
+.step-card h3 {
+  position: relative;
+  z-index: 2;
+
+  max-width: 270px;
+
+  margin: 0 0 12px;
+
+  color: #173432;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 20px;
+
+  line-height: 1.25;
+
+  letter-spacing: -0.35px;
+
+  font-weight: 700;
+}
+
+.step-card p {
+  position: relative;
+  z-index: 2;
+
+  margin: 0 0 18px;
+
+  color: #74817b;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+.step-tag {
+  position: relative;
+  z-index: 2;
+
+  display: inline-block;
+
+  padding: 6px 9px;
+
+  border:
+    1px solid rgba(11, 71, 69, 0.09);
+
+  border-radius: 7px;
+
+  background: #faf7ef;
+
+  color: #8c7555;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.65px;
+}
+
+/* =========================================================
+   BOTTOM CTA
+   ========================================================= */
+
+.how-it-works-bottom {
+  position: relative;
+
+  margin-top: 20px;
+
+  padding: 34px 35px;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(11, 71, 69, 0.14);
+
+  border-radius: 19px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0b4745 0%,
+      #123f3d 100%
+    );
+
+  color: #fffaf2;
+
+  box-shadow:
+    0 16px 38px rgba(11, 71, 69, 0.15);
+
+  contain: paint;
+}
+
+.how-it-works-bottom::before {
+  content: "";
+
+  position: absolute;
+
+  width: 210px;
+  height: 210px;
+
+  right: -85px;
+  top: -115px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(210, 182, 138, 0.13);
+
+  pointer-events: none;
+}
+
+.how-it-works-bottom::after {
+  content: "";
+
+  position: absolute;
+
+  width: 130px;
+  height: 130px;
+
+  left: -65px;
+  bottom: -75px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 250, 242, 0.045);
+
+  pointer-events: none;
+}
+
+.how-it-works-bottom h3 {
+  position: relative;
+  z-index: 2;
+
+  margin: 0 0 10px;
+
+  color: #fffaf2;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 27px;
+
+  line-height: 1.25;
+
+  letter-spacing: -0.5px;
+
+  font-weight: 700;
+}
+
+.how-it-works-bottom h3 span {
+  color: #d9bf98;
+}
+
+.how-it-works-bottom p {
+  position: relative;
+  z-index: 2;
+
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  color: rgba(255, 250, 242, 0.72);
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .how-it-works {
+    padding:
+      80px 20px
+      90px;
+  }
+
+  .steps-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .step-card {
+    min-height: 300px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+  .how-it-works {
+    padding:
+      70px 16px
+      75px;
+  }
+
+  .how-it-works h2 {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+
+  .how-it-works-subtitle {
+    margin-bottom: 34px;
+    font-size: 11px;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .step-card {
+    min-height: auto;
+
+    padding: 23px;
+
+    border-radius: 16px;
+  }
+
+  .step-icon {
+    width: 44px;
+    height: 44px;
+
+    margin-bottom: 18px;
+  }
+
+  .step-icon svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .step-card h3 {
+    font-size: 20px;
+  }
+
+  .step-card p {
+    font-size: 10px;
+  }
+
+  .step-tag {
+    font-size: 7px;
+  }
+
+  .how-it-works-bottom {
+    margin-top: 16px;
+
+    padding: 27px 22px;
+
+    border-radius: 17px;
+  }
+
+  .how-it-works-bottom h3 {
+    font-size: 24px;
+  }
+
+  .how-it-works-bottom p {
+    font-size: 10px;
+  }
+}
+
+/* =========================================================
+   REDUCE MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .step-card,
+  .step-card::after,
+  .step-icon {
+    transition: none;
+  }
+}

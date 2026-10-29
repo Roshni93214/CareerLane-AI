@@ -1,0 +1,31 @@
+{
+  "name": "ai-career-guide-server",
+  "version": "1.0.0",
+  "description": "Backend server for AI Career Guide",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "@google/genai": "^2.18.0",
+    "@mistralai/mistralai": "^2.7.0",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "groq-sdk": "^1.6.0",
+    "jsonwebtoken": "^9.0.3",
+    "jspdf": "^4.2.1",
+    "konva": "^10.7.1",
+    "mammoth": "^1.12.2",
+    "mongoose": "^9.9.3",
+    "multer": "^2.2.0",
+    "nodemailer": "^9.0.5",
+    "openai": "^7.27.0",
+    "pdf-parse": "^2.4.5",
+    "react-konva": "^19.3.0",
+    "use-image": "^1.1.4",
+    "word-extractor": "^1.0.4"
+  }
+}
